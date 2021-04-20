@@ -1,7 +1,7 @@
 
 
 ### Name
-
+Ecommerce backend.
 
 ### Live Application Link 👀
 See live application 
@@ -34,6 +34,8 @@ See live application
 ## Project Visual 😎
 
 #### From assignment:   
+![13-orm-homework-demo-01](https://user-images.githubusercontent.com/77648727/115477536-fa67cc80-a1f8-11eb-97e0-f35a8c902d4f.gif)
+
 
 #### Project Execution:   
 
