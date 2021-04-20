@@ -42,6 +42,4 @@ See live application
 
 
 ## Acknowledgement, & Resources 🤝
-
-### Official OpenWeather API Documentation :cloud:
 - [x](y)
