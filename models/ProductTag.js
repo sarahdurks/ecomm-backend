@@ -1,6 +1,7 @@
 // dependencies
 const { Model, DataTypes, Deferrable } = require('sequelize');
-const { Product, Tag } = require('.');
+const  Product = require('./Product')
+const  Tag = require('./Tag')
 const sequelize = require('../config/connection.js');
 
 // Product class Tag

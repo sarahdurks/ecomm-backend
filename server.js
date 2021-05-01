@@ -1,6 +1,8 @@
 // Dependencies
 const express = require('express');
 const routes = require('./routes');
+const sequelize = require('./config/connection');
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -9,7 +11,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 
-// App Listen
-app.listen(PORT, () => {
-  console.log(`The ecomm app is now listening on port ${PORT}!`);
+// Sync sequelize and start server
+sequelize.sync({ force: false }).then(() => {
+app.listen(PORT, () => 
+  console.log(`Listening on port ${PORT}`));
 });

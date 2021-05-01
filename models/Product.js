@@ -1,7 +1,6 @@
 // Dependency
 const { Model, DataTypes, Deferrable } = require('sequelize');
 const { Category } = require('.');
-// Connecting
 const sequelize = require('../config/connection');
 
 // Proudct class extension
@@ -31,7 +30,7 @@ Product.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: 10,
-      validate: { isNumber: true }
+      validate: { isNumeric: true }
 
     },
     stock: {
