@@ -1,9 +1,10 @@
 
+![Frame 30](https://user-images.githubusercontent.com/77648727/116792842-0add3a00-aa78-11eb-83e0-bb7c468f1e09.png)
 
 # Name
 E-commerce Back End
 
-### Descrtiption
+### Descritiption
 Development of the back end for an e-commerce site using Express.js API, configured to use sequelize to interact with a MySQL database. 
 
 ### Built With 🧰
