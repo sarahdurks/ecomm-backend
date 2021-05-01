@@ -1,16 +1,15 @@
-// import important parts of sequelize library
+// Dependency
 const { Model, DataTypes, Deferrable } = require('sequelize');
 const { Category } = require('.');
-// import our database connection from config.js
+// Connecting
 const sequelize = require('../config/connection');
 
-// Initialize Product model (table) by extending off Sequelize's Model class
-class Product extends Model {}
+// Proudct class extension
+class Product extends Model { }
 
-// set up fields and rules for Product model
+// Product model set up
 Product.init(
   {
-    // define columns
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -25,41 +24,41 @@ Product.init(
       type: DataTypes.DECIMAL,
       allowNull: false,
       validate: {
-        isDecimal: true 
+        isDecimal: true
+      }
+    },
+    stock: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 10,
+      validate: { isNumber: true }
+
+    },
+    stock: {
+      type:
+        DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 10,
+      validate:
+        { isNumeric: true 
+      }
+    },
+    category_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: Category,
+        key: 'id',
+        deferrable: Deferrable.INITIALLY_IMMEDIATE
+      }
     }
   },
-  stock: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    defaultValue: 10,
-    validate: { isNumber: true } 
-  
-  },
-  stock: {
-    type:
-    DataTypes.INTEGER,
-    allowNull: false,
-    defaultValue: 10,
-    validate: 
-    {isNumeric: true }
-  
-},
-  category_id: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    references: {
-      model: Category,
-      key: 'id',
-      deferrable: Deferrable.INITIALLY_IMMEDIATE
-    }
-  }
-},
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'product',
+    modelName: 'product'
   }
 );
 

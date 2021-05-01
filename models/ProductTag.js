@@ -1,10 +1,12 @@
+// dependencies
 const { Model, DataTypes, Deferrable } = require('sequelize');
 const { Product, Tag } = require('.');
+const sequelize = require('../config/connection.js');
 
-const sequelize = require('../config/connection');
+// Product class Tag
+class ProductTag extends Model { }
 
-class ProductTag extends Model {}
-
+// Product tag set up
 ProductTag.init(
   {
     id: {
@@ -30,13 +32,12 @@ ProductTag.init(
       }
     }
   },
-
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'product_tag',
+    modelName: 'product_tag'
   }
 );
 

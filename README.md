@@ -1,16 +1,23 @@
 
 
-### Name
-Ecommerce backend.
+# Name
+E-commerce Back End
 
-### Live Application Link 👀
-See live application 
-
+### Descrtiption
+Development of the back end for an e-commerce site using Express.js API, configured to use sequelize to interact with a MySQL database. 
 
 ### Built With 🧰
-- [x] HTML
-- [x] Bootstrap / CSS
+- [x] Express
+- [x] MySQL
+- [x] Sequelize
 
+### Built With
+To use:
+
+`Download the code or clone the repo
+`Open MySQL workbench
+`npm i to install necessary packages
+`npm run seed to populate database
 
 
 ### User Story 📖
@@ -33,13 +40,13 @@ See live application
 
 ## Project Visual 😎
 
-#### From assignment:   
+### From assignment:   
 ![13-orm-homework-demo-01](https://user-images.githubusercontent.com/77648727/115477536-fa67cc80-a1f8-11eb-97e0-f35a8c902d4f.gif)
 
+### See Video Demo
+[ADD IN LATER]
 
-#### Project Execution:   
-
-
-
-## Acknowledgement, & Resources 🤝
-- [x](y)
+## Acknowledgement, Documentation & Resources 🤝
+- [Sequelize Documentation](https://sequelize.org/v5/)
+- [Workbench documentation](https://dev.mysql.com/doc/workbench/en/)
+- [MySQL2 Documentation](https://www.npmjs.com/package/mysql2)

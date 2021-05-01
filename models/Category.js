@@ -1,9 +1,12 @@
+
+// Dependencies
 const { Model, DataTypes } = require('sequelize');
-
-const sequelize = require('../config/connection.js');
 const { primaryKeyAttribute } = require('./Tag.js');
+// Sequelize
+const sequelize = require('../config/connection.js');
 
-class Category extends Model {}
+// Class Category
+class Category extends Model { }
 
 Category.init(
   {
@@ -24,10 +27,8 @@ Category.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'category',
+    modelName: 'Category',
   }
 );
 
 module.exports = Category;
-
-//Category

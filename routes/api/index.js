@@ -1,10 +1,14 @@
+//Dependencies
 const router = require('express').Router();
-const apiRoutes = require('./api');
+const tagRoutes = require('./tag-routes');
+const productRoutes = require('./product-routes');
+const categoryRoutes = require('./category-routes');
 
-router.use('/api', apiRoutes);
+// Use routes
+router.use('/tag', tagRoutes);
+router.use('/products', productRoutes);
+router.use('/categories', categoryRoutes);
 
-router.use((req, res => {
-    res.send("404")
-});
+
 
 module.exports = router;
