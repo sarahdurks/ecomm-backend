@@ -1,7 +1,9 @@
-// dependencies
+// Product Tag Model
+// Dependencies
 const { Model, DataTypes, Deferrable } = require('sequelize');
 const  Product = require('./Product')
 const  Tag = require('./Tag')
+// Connect
 const sequelize = require('../config/connection.js');
 
 // Product class Tag
@@ -43,3 +45,23 @@ ProductTag.init(
 );
 
 module.exports = ProductTag;
+
+/* Checked requirements:
+
+DEFERRABLE (currently IMMEDIATE) all rows are checked at the end of the insert/update 
+
+ProductTag
+- id
+  - Integer
+  - Doesn't allow null values
+  - Set as primary key
+  - Uses auto increment
+
+- product_id
+  - Integer
+  - References the product model's id
+
+tag_id
+  - Integer
+  - References the tag model's id
+  */

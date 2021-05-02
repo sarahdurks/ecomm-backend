@@ -2,17 +2,17 @@
 ![Frame 30](https://user-images.githubusercontent.com/77648727/116792842-0add3a00-aa78-11eb-83e0-bb7c468f1e09.png)
 
 # Name
-E-commerce Back End
+// E-commerce Back End
 
 ### Descritiption
 Development of the back end for an e-commerce site using Express.js API, configured to use sequelize to interact with a MySQL database. 
 
 ### Built With 🧰
-- [x] Express
+- [x] Express.js
 - [x] MySQL
 - [x] Sequelize
 
-### Built With
+### How to use
 To use:
 
 `Download the code or clone the repo
@@ -44,10 +44,12 @@ To use:
 ### From assignment:   
 ![13-orm-homework-demo-01](https://user-images.githubusercontent.com/77648727/115477536-fa67cc80-a1f8-11eb-97e0-f35a8c902d4f.gif)
 
-### See Video Demo
+### See Video Demo 
 [ADD IN LATER]
 
 ## Acknowledgement, Documentation & Resources 🤝
 - [Sequelize Documentation](https://sequelize.org/v5/)
 - [Workbench documentation](https://dev.mysql.com/doc/workbench/en/)
 - [MySQL2 Documentation](https://www.npmjs.com/package/mysql2)
+- [SQL Troubleshooting Resources on Stack Overflow](https://stackoverflow.com/questions/26554818/using-mysql-in-the-command-line-in-osx-command-not-found)
+- [SQL Deferrable Constraints Resoruces](https://begriffs.com/posts/2017-08-27-deferrable-sql-constraints.html)

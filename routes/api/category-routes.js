@@ -1,10 +1,15 @@
+
+// CATEGORY ROUTES
+
 // Dependencies
 const router = require('express').Router();
 const {
     Category,
     Product
-} = require('../../models');
+} = require('../../models/index');
 
+
+// GET //
 // find all categories and include associated products
 router.get('/', async (req, res) => {
     try {
@@ -38,6 +43,8 @@ router.get('/:id', async (req, res) => {
         res.status(400).json(e)
     }
 });
+
+// CREATE //
 // Create a new category
 router.post('/', async (req, res) => {
     let {
@@ -58,7 +65,7 @@ router.post('/', async (req, res) => {
         res.status(400).json(e);
     }
 });
-
+// UPDATE //
 // Update category by id value
 router.put('/:id', async (req, res) => {
     let {

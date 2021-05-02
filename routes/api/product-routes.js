@@ -1,6 +1,10 @@
+// Product Routes //
+
 // Dependencies
 const router = require("express").Router();
 const { Product, Category, Tag, ProductTag } = require("../../models");
+
+// GET
 // Get all Proeducts
 router.get("/", async (req, res) => {
     try {
@@ -10,6 +14,7 @@ router.get("/", async (req, res) => {
         res.status(400).json(e);
     }
 });
+// GET
 // Get one Product by id
 router.get("/:id", async (req, res) => {
     const { id } = req.params;
@@ -26,6 +31,7 @@ router.get("/:id", async (req, res) => {
         res.status(400).json(e);
     }
 });
+// POST
 // Create product
 router.post("/", async (req, res) => {
     try {
@@ -42,7 +48,8 @@ router.post("/", async (req, res) => {
         res.status(400).json({ error: e });
     }
 });
-// Update product data
+// PUT
+// Updates product data
 router.put("/:id", async (req, res) => {
     try {
         await Product.update(req.body, { where: { id: req.params.id } });
@@ -53,9 +60,9 @@ router.put("/:id", async (req, res) => {
         const newProductTags = req.body.tagIds.filter((tag_id) => !productTagIds.includes(tag_id)).map((tag_id) => {
             return { product_id: req.params.id, tag_id };
         });
-        const productTagsToRemove = productTags.filter(({ tag_id }) => !req.body.tagIds.includes(tag_id)).map(({ id }) => id);
+        const productTagRemove = productTags.filter(({ tag_id }) => !req.body.tagIds.includes(tag_id)).map(({ id }) => id);
         const updatedProductTags = await Promise.all([
-            ProductTag.destroy({ where: { id: productTagsToRemove } }),
+            ProductTag.destroy({ where: { id: productTagRemove } }),
             ProductTag.bulkCreate(newProductTags),
         ]);
         const productById = await Product.findOne({
@@ -67,6 +74,7 @@ router.put("/:id", async (req, res) => {
         res.status(400).json({ error: e });
     }
 });
+// DELETE
 // Delete one product by id
 router.delete("/:id", async (req, res) => {
     const { id } = req.params;

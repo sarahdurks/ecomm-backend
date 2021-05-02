@@ -1,5 +1,10 @@
+// Tag Routes
+
+// Tag Route dependencies
 const router = require("express").Router();
-const { Tag, Product, ProductTag } = require("../../models");
+const { Tag, Product, ProductTag } = require("../../models/index.js");
+
+// GET
 // Find all tags and return product data
 router.get("/", async (req, res) => {
     try {
@@ -9,6 +14,7 @@ router.get("/", async (req, res) => {
         res.status(400).json(e);
     }
 });
+// GET
 // Find tag by id and return product data
 router.get('/:id', async (req, res) => {
     const { id } = req.params;
@@ -22,6 +28,7 @@ router.get('/:id', async (req, res) => {
         res.status(400).json(e);
     }
 });
+// POST
 // Create new tag
 router.post("/", async (req, res) => {
     let { tag_name } = req.body;
@@ -33,6 +40,7 @@ router.post("/", async (req, res) => {
         res.status(400).json(e);
     }
 });
+// PUT
 // Update tag name by id
 router.put("/:id", async (req, res) => {
     const { id } = req.params;
@@ -48,6 +56,7 @@ router.put("/:id", async (req, res) => {
         res.status(400).json(e);
     }
 });
+// DELETE
 // Delete tag by id
 router.delete("/:id", async (req, res) => {
     const { id } = req.params;

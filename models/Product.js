@@ -1,7 +1,9 @@
+// Product Model
+
 // Dependency
 const { Model, DataTypes, Deferrable } = require('sequelize');
-const { Category } = require('.');
-const sequelize = require('../config/connection');
+const { Category } = require('./index');
+const sequelize = require('../config/connection.js');
 
 // Proudct class extension
 class Product extends Model { }
@@ -33,15 +35,6 @@ Product.init(
       validate: { isNumeric: true }
 
     },
-    stock: {
-      type:
-        DataTypes.INTEGER,
-      allowNull: false,
-      defaultValue: 10,
-      validate:
-        { isNumeric: true 
-      }
-    },
     category_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -62,3 +55,30 @@ Product.init(
 );
 
 module.exports = Product;
+
+/* Requirements:
+Product
+id
+  - Integer
+  - Doesn't allow null values
+  - Set as primary key
+  - Uses auto increment
+
+product_name
+  - String
+  - Doesn't allow null values
+
+price
+  - Decimal
+  - Doesn't allow null values
+  - Validates that the value is a decimal
+
+stock
+  - Integer
+  - Doesn't allow null values
+  - Set a default value of 10
+  - Validates that the value is numeric
+
+category_id
+  - Integer
+  - References the category model's id */

@@ -1,4 +1,4 @@
-// Dependencies
+// Product Tag Seed Data
 const { ProductTag } = require('../models');
 
 const productTagData = [{
@@ -38,5 +38,6 @@ const productTagData = [{
     product_id: 5,
     tag_id: 3,
 }, ];
+
 const seedProductTags = () => ProductTag.bulkCreate(productTagData);
 module.exports = seedProductTags;

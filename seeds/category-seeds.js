@@ -1,4 +1,4 @@
-// Depdendencies
+// Category Seeds
 const { Category } = require('../models');
 const categoryData = [{
     category_name: 'Shirts',
