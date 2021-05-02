@@ -2,7 +2,7 @@
 ![Frame 30](https://user-images.githubusercontent.com/77648727/116792842-0add3a00-aa78-11eb-83e0-bb7c468f1e09.png)
 
 # Name
-// E-commerce Back End
+E-commerce Back End
 
 ### Descritiption
 Development of the back end for an e-commerce site using Express.js API, configured to use sequelize to interact with a MySQL database. 
@@ -53,3 +53,4 @@ To use:
 - [MySQL2 Documentation](https://www.npmjs.com/package/mysql2)
 - [SQL Troubleshooting Resources on Stack Overflow](https://stackoverflow.com/questions/26554818/using-mysql-in-the-command-line-in-osx-command-not-found)
 - [SQL Deferrable Constraints Resoruces](https://begriffs.com/posts/2017-08-27-deferrable-sql-constraints.html)
+- [All you need to know about Async Await In JavaScript](https://medium.com/technofunnel/javascript-async-await-c83b15950a71)
