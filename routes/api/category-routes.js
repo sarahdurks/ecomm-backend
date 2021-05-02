@@ -57,7 +57,7 @@ router.post('/', async (req, res) => {
             });
         }
         category_name = category_name.trim();
-        let newCategory = await Category.create({
+        const newCategory = await Category.create({
             category_name
         });
         res.json(newCategory);

@@ -36,16 +36,16 @@ router.get("/:id", async (req, res) => {
 router.post("/", async (req, res) => {
     try {
         const product = await Product.create(req.body);
-        if (req.body.tagIds.length) {
-            const productTagIdArray = req.body.tagIds.map((tag_id) => {
-                return { product_id: product.id, tag_id };
-            });
-            const productTagIds = await ProductTag.bulkCreate(productTagIdArray);
-            res.status(200).json({ product, productTagIds });
-        }
-        res.status(200).json(product);
+        // if (req.body.tagIds.length) {
+        //     const productTagIdArray = req.body.tagIds.map((tag_id) => {
+        //         return { product_id: product.id, tag_id, };
+        //     });
+        //     const productTagIds = await ProductTag.bulkCreate(productTagIdArray);
+        //     res.status(200).json({ product, productTagIds });
+        // }
+       res.status(200).json(product);
     } catch (e) {
-        res.status(400).json({ error: e });
+        res.status(400).json({ error: e })
     }
 });
 // PUT
