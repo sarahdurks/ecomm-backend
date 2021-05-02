@@ -13,12 +13,12 @@ Development of the back end for an e-commerce site using Express.js API, configu
 - [x] Sequelize
 
 ### How to use
-To use:
+To get started:
 
-` Download the code or clone the repo`                
-` Open MySQL workbench   `     
+` Download the code or clone the repo`                    
 ` npm i to install necessary packages `       
 ` npm run seed to populate database `       
+` npm start` 
 
 ### User Story 📖
 > AS A manager at an internet retail company      
