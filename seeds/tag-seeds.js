@@ -1,3 +1,4 @@
+// Tag Seed Data
 const { Tag } = require('../models');
 const tagData = [{
     tag_name: 'rock music',
