@@ -1,8 +1,7 @@
 // Product Model
 
 // Dependency
-const { Model, DataTypes, Deferrable } = require('sequelize');
-const { Category } = require('./index');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection.js');
 
 // Proudct class extension
@@ -39,9 +38,8 @@ Product.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: Category,
-        key: 'id',
-        deferrable: Deferrable.INITIALLY_IMMEDIATE
+        model: 'category',
+        key: 'id'
       }
     }
   },

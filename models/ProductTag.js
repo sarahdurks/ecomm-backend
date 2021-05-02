@@ -1,9 +1,7 @@
 // Product Tag Model
 // Dependencies
-const { Model, DataTypes, Deferrable } = require('sequelize');
-const  Product = require('./Product')
-const  Tag = require('./Tag')
-// Connect
+const { Model, DataTypes} = require('sequelize');
+
 const sequelize = require('../config/connection.js');
 
 // Product class Tag
@@ -21,17 +19,15 @@ ProductTag.init(
     product_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: Product,
-        key: 'id',
-        deferrable: Deferrable.INITIALLY_IMMEDIATE
+        model: 'product',
+        key: 'id'
       }
     },
     tag_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: Tag,
-        key: 'id',
-        deferrable: Deferrable.INITIALLY_IMMEDIATE
+        model: 'tag',
+        key: 'id'
       }
     }
   },
