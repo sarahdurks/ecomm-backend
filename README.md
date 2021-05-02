@@ -15,10 +15,10 @@ Development of the back end for an e-commerce site using Express.js API, configu
 ### How to use
 To use:
 
-` Download the code or clone the repo        
-` Open MySQL workbench        
-` npm i to install necessary packages        
-` npm run seed to populate database        
+` Download the code or clone the repo`                
+` Open MySQL workbench   `     
+` npm i to install necessary packages `       
+` npm run seed to populate database `       
 
 ### User Story 📖
 > AS A manager at an internet retail company      
