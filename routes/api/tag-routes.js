@@ -2,7 +2,7 @@
 
 // Tag Route dependencies
 const router = require("express").Router();
-const { Tag, Product, ProductTag } = require("../../models/index.js");
+const { Tag, Product } = require('index../../models/index');
 
 // GET
 // Find all tags and return product data
