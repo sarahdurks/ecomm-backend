@@ -4,7 +4,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection.js');
 
-// Proudct class extension
+// Prouduct class extension
 class Product extends Model { }
 
 // Product model set up
@@ -36,9 +36,8 @@ Product.init(
     },
     category_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       references: {
-        model: 'category',
+        model: 'Category',
         key: 'id'
       }
     }
@@ -48,7 +47,7 @@ Product.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'product'
+    modelName: 'Product'
   }
 );
 

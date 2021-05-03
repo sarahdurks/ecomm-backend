@@ -44,7 +44,8 @@ To get started:
 ![13-orm-homework-demo-01](https://user-images.githubusercontent.com/77648727/115477536-fa67cc80-a1f8-11eb-97e0-f35a8c902d4f.gif)
 
 ### See Video Demo 
-[ADD IN LATER]
+Most of the video [here](https://drive.google.com/file/d/1ZbpdbXu5I-TXvZ3nRhU5m4zPEKSVF5tE/view)
+Last bit showing PUT, POST, DELETE examples [here](https://drive.google.com/file/d/1lecc7B8xZqLjd11UeUp0PA7Nu1ViSJbM/view)
 
 ## Acknowledgement, Documentation & Resources 🤝
 - [Sequelize Documentation](https://sequelize.org/v5/)
